@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  redis-rdb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        CONFIG_FILE: redis-rdb.conf
+    ports:
+      - "6379:6379"
+    volumes:
+      - /mnt/f/redis-load-testing/data/rdb:/data
+
+  redis-aof-default:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        CONFIG_FILE: redis-aof-default.conf
+    ports:
+      - "6380:6379"
+    volumes:
+      - /mnt/f/redis-load-testing/data/aof-default:/data
+
+  redis-aof-always:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        CONFIG_FILE: redis-aof-always.conf
+    ports:
+      - "6381:6379"
+    volumes:
+      - /mnt/f/redis-load-testing/data/aof-always:/data
