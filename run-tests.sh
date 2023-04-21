@@ -24,7 +24,7 @@ wait_for_redis() {
 # Default values for memtier_benchmark arguments
 THREADS=4
 CONNECTIONS=50
-REQUESTS=10000
+REQUESTS=100000
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
