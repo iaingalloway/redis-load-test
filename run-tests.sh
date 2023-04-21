@@ -26,9 +26,6 @@ THREADS=4
 CONNECTIONS=50
 REQUESTS=10000
 
-# Default paths
-REDIS_DATA_PATH=./data/redis
-
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
   key="$1"
@@ -46,11 +43,6 @@ while [[ $# -gt 0 ]]; do
       ;;
     -n|--requests)
       REQUESTS="$2"
-      shift
-      shift
-      ;;
-    -v|--volume)
-      REDIS_DATA_PATH="$2"
       shift
       shift
       ;;
