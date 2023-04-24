@@ -67,7 +67,7 @@ echo "Running memtier_benchmark for RDB..."
 docker run --network=host -v $(pwd)/logs:/logs redislabs/memtier_benchmark:latest -s 127.0.0.1 -p 6379 -t $THREADS -c $CONNECTIONS -n $REQUESTS -o /logs/rdb.log
 
 echo "Running memtier_benchmark for AOF with default settings..."
-docker run --network=host -v $(pwd)/logs:/logs redislabs/memtier_benchmark:latest -s 127.0.0.1 -p 6380 -t $THREADS -c $CONNECTIONS -n $REQUESTS -o /logs/aof_1s.log
+docker run --network=host -v $(pwd)/logs:/logs redislabs/memtier_benchmark:latest -s 127.0.0.1 -p 6380 -t $THREADS -c $CONNECTIONS -n $REQUESTS -o /logs/aof_default.log
 
 echo "Running memtier_benchmark for AOF flushing always..."
 docker run --network=host -v $(pwd)/logs:/logs redislabs/memtier_benchmark:latest -s 127.0.0.1 -p 6381 -t $THREADS -c $CONNECTIONS -n $REQUESTS -o /logs/aof_always.log
