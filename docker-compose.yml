@@ -32,3 +32,4 @@ services:
       - "6381:6379"
     volumes:
       - /mnt/f/redis-load-testing/data/aof-always:/data
+

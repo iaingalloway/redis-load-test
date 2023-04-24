@@ -74,3 +74,4 @@ docker run --network=host -v $(pwd)/logs:/logs redislabs/memtier_benchmark:lates
 
 echo "Stopping Redis containers..."
 docker-compose down
+

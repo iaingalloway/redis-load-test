@@ -33,3 +33,4 @@ On my machine, I get the following results:
 | RDB           | 11.4 MB/s          |
 | AOF default   |  9.56 MB/s         |
 | AOF always    |  0.152 MB/s        |
+
